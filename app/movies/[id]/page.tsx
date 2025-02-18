@@ -39,22 +39,22 @@ export default function MovieDetail() {
         <header className="w-full flex gap-4 justify-between items-center sm:items-start">
           <SiteNav />
         </header>
-        <h1 className="text-4xl font-bold">{movieInfo.title}</h1>
+        <h1 className="text-4xl font-bold">{movieInfo?.title}</h1>
         <div className="flex gap-4">
           <div className="flex flex-col shrink-0">
             <Image
-              src={movieInfo.poster}
-              alt={movieInfo.title}
+              src={movieInfo?.poster}
+              alt={movieInfo?.title}
               width={300}
               height={200}
               className="rounded-lg object-contain"
               style={{ maxWidth: "100%", height: "100%" }}
             />
-            <p>{formarDate(new Date(movieInfo.released))}</p>
+            <p>{formarDate(new Date(movieInfo?.released))}</p>
           </div>
           <div className="flex flex-col items-center gap-4">
-            <p>{movieInfo.fullplot}</p>
-            <p>{movieInfo.imdb.rating}</p>
+            <p>{movieInfo?.fullplot}</p>
+            <p>{movieInfo?.imdb?.rating}</p>
           </div>
         </div>
       </main>

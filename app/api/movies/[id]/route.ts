@@ -15,6 +15,7 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
 
     return NextResponse.json(movie, { status: 200 });
   } catch (error) {
+    console.error(error);
     return NextResponse.json({ error: "Film getirilemedi" }, { status: 500 });
   }
 }
@@ -34,6 +35,7 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
 
     return NextResponse.json(updatedMovie, { status: 200 });
   } catch (error) {
+    console.error(error);
     return NextResponse.json({ error: "Film güncellenemedi" }, { status: 500 });
   }
 }
@@ -51,6 +53,7 @@ export async function DELETE(req: NextRequest, { params }: { params: { id: strin
 
     return NextResponse.json({ message: "Film silindi" }, { status: 200 });
   } catch (error) {
+    console.error(error);
     return NextResponse.json({ error: "Film silinemedi" }, { status: 500 });
   }
 }
