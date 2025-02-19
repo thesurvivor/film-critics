@@ -2,7 +2,13 @@ import { NextRequest, NextResponse } from "next/server";
 import clientPromise from "@/lib/mongodb";
 import { ObjectId } from "mongodb";
 
-export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
+interface parameters {
+  params: {
+    id: string;
+  };
+}
+
+export async function GET(req: NextRequest, { params }: parameters) {
   try {
     const client = await clientPromise;
     const db = client.db("sample_mflix");
