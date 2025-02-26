@@ -6,7 +6,7 @@ const SiteNav = () => {
     <nav className="site-nav">
       <ul className="flex gap-4">
         <NavItem
-          href="/home"
+          href="/"
           classnames="hover:text-gray-600"
           activeClassnames="text-gray-600"
         >
