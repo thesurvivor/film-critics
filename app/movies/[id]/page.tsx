@@ -34,7 +34,7 @@ export default function MovieDetail() {
   if (!movieInfo) return <p>Film bilgisi bulunamadı</p>;
 
   return (
-    <div className="container justify-center min-h-screen px-4 grid grid-rows-[auto_1fr_auto] gap-16 font-[family-name:var(--font-geist-sans)]">
+    <div className="min-h-screen px-4 grid grid-rows-[auto_1fr_auto] gap-16 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-4 w-full">
         <header className="w-full flex gap-4 justify-between items-center sm:items-start">
           <SiteNav />

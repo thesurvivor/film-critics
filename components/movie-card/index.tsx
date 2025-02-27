@@ -23,7 +23,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
 
       <div className="flex gap-4 justify-between w-full">
         <p>{formatDate(new Date(movie.released))}</p>
-        <p>{movie.imdb.rating}</p>
+        <p><strong>IMDB:</strong> {movie.imdb.rating}</p>
         
       </div>
     </div>
