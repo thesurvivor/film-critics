@@ -23,7 +23,7 @@ export default function Home() {
             <SiteNav />
           </header>
           <h1 className="text-4xl font-bold">Home</h1>
-          <div className="grid grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             {
               movies.map((movie, index) => (
                 <MovieCard key={index} movie={movie} />
