@@ -2,11 +2,10 @@ import { NextResponse } from "next/server";
 import clientPromise from "@/lib/mongodb";
 import { ObjectId } from "mongodb";
 import type { NextRequest } from "next/server";
-export const dynamic = 'force-static'
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: Promise<{ id: string }> } // Doğru tip
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     const id = (await params).id
